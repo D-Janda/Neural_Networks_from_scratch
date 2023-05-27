@@ -219,17 +219,6 @@ hidden_size_list <- c(64, 128, 256)
 batch_size_list <- c(32, 64, 128)
 num_epochs_list <- c(50, 100, 200)
 
-# Create grid of hyperparameters
-grid <- expand.grid(
-  learning_rate = learning_rates,
-  batch_size = batch_sizes,
-  hidden_layers = hidden_layers,
-  neurons = neurons
-)
-
-
-
-
 # Hyperparameter tuning
 best_accuracy <- 0
 best_hyperparameters <- list()
@@ -293,5 +282,5 @@ for (learning_rate in learning_rate_list) {
 # Print the best hyperparameters and accuracy
 print("Best Hyperparameters:")
 print(best_hyperparameters)
-print(paste("Best Accuracy:", best_accuracy))
+print(paste("Best Accuracy:", best_accuracy))s
 
